@@ -1,0 +1,28 @@
+# pyproject.toml
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D102", # Missing docstring in public method
+    "D103", # Missing docstring in public function
+    "D104", # Missing docstring in public package
+    "ANN101", # Missing type annotation for self
+    "ANN102", # Missing type annotation for cls
+    "S101",  # Use of `assert` detected (allowed in tests)
+    "T201", # Allow use of print()
+    "D107", # Ignore missing docstring in __init__
+    "PERF401", # List comprehension
+    "D203",   # <-- disable this to avoid conflict with D211
+    "D213",  # <-- disable this to avoid conflict with D212
+]
